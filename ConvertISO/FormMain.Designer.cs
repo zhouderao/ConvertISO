@@ -153,6 +153,7 @@
             this.ClientSize = new System.Drawing.Size(1311, 723);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
             this.Text = "3B转G代码";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

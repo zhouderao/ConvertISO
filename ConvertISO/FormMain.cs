@@ -28,12 +28,17 @@ namespace ConvertISO
             ofd.Filter = "3b代码文件|*.3b";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                //相关信息重置
+                shapes.Clear();
+                this.lstBxB.Items.Clear();
+                this.lstBxG.Items.Clear();
+
+
                 PointF staPnt = new PointF();
                 PointF endPnt = new PointF();
                 PointF relPnt = new PointF();
                 path = ofd.FileName;
                 StreamReader sr = new StreamReader(path, Encoding.UTF8);
-
                 string strLine = null;
                 string outStr = null;
                 #region 字符串转换
@@ -76,7 +81,7 @@ namespace ConvertISO
                             endPnt = this.getPoint(strLine);
 
                             int quad = (int)Convert.ToDouble(strLine.Substring(strLine.IndexOf('R') + 1, 1));
-                            relPnt = this.getRelPoint(strLine.Substring(strLine.IndexOf(':') + 1, strLine.IndexOf('G')),quad);
+                            relPnt = this.getRelPoint(strLine.Substring(strLine.IndexOf('B') + 1, strLine.IndexOf('G')),quad);
 
                             outStr = "N" + n.ToString() + " G02 X";
                             outStr += String.Format("{0:N3}", endPnt.X) + " Y" + String.Format("{0:N3}", endPnt.Y) +" I"+
@@ -117,6 +122,7 @@ namespace ConvertISO
                 #endregion
 
                 Graphics grp = this.pnlDraw.CreateGraphics();
+
                 grp.Clear(this.pnlDraw.BackColor);
 
                 int tempI = 0;
@@ -129,11 +135,39 @@ namespace ConvertISO
                 this.lstBxG.Items.Add(outStr);
                 sr.Close();
             }
+            ofd.Dispose();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (this.lstBxG.Items.Count == 0)
+            {
+                MessageBox.Show("不存在路径，请载入", "提示");
+                return;
+            }
 
+            SaveFileDialog sfd = new SaveFileDialog();
+
+            sfd.Filter = "标准G代码文件|*.iso";
+            
+            string path = string.Empty;
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                path = sfd.FileName;
+                string strName = "(" + sfd.FileName.Substring(path.LastIndexOf("\\") + 1) + " " + System.DateTime.Now.ToString() + ")";
+                FileStream fs = new FileStream(path, FileMode.Create);
+                StreamWriter sw = new StreamWriter(fs);
+
+                sw.WriteLine(strName);
+                foreach (String str in this.lstBxG.Items)
+                {
+                    sw.WriteLine(str);
+                }
+
+                sw.Close();
+                fs.Close();
+            }
+            sfd.Dispose();
         }
 
         private PointF getPoint(string str)

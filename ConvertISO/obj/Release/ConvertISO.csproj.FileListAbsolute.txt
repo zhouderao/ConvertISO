@@ -1,0 +1,8 @@
+F:\GitHub\ConvertISO\ConvertISO\bin\Release\ConvertISO.exe.config
+F:\GitHub\ConvertISO\ConvertISO\bin\Release\ConvertISO.exe
+F:\GitHub\ConvertISO\ConvertISO\bin\Release\ConvertISO.pdb
+F:\GitHub\ConvertISO\ConvertISO\obj\Release\ConvertISO.FormMain.resources
+F:\GitHub\ConvertISO\ConvertISO\obj\Release\ConvertISO.Properties.Resources.resources
+F:\GitHub\ConvertISO\ConvertISO\obj\Release\ConvertISO.csproj.GenerateResource.Cache
+F:\GitHub\ConvertISO\ConvertISO\obj\Release\ConvertISO.exe
+F:\GitHub\ConvertISO\ConvertISO\obj\Release\ConvertISO.pdb

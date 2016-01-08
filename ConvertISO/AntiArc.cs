@@ -28,13 +28,11 @@ namespace ConvertISO
 
             this.startAng = ArcMethod.GetAngle(-relPos.Y / this.radius, -relPos.X / this.radius);
 
-            if (startPoint.X == endPoint.X && startPoint.Y == startPoint.Y)
+            if (startPoint.X == endPoint.X && startPoint.Y == endPoint.Y)
                 this.endAng = this.startAng;
             else
                 this.endAng = ArcMethod.GetAngle((this.EndPoint.Y - this.StartPoint.Y - relPos.Y) / this.radius,
                 (this.EndPoint.X - this.StartPoint.X - relPos.X) / this.radius);
-
-
         }
 
         public override void GDIDraw(Graphics grp, float frameHeight, float x, float y,Brush brush)

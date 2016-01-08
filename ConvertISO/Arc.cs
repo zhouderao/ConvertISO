@@ -28,7 +28,7 @@ namespace ConvertISO
 
             this.startAng = ArcMethod.GetAngle(-relPos.Y / this.radius, -relPos.X / this.radius);
 
-            if (startPoint.X == endPoint.X && startPoint.Y == startPoint.Y)
+            if (startPoint.X == endPoint.X && startPoint.Y == endPoint.Y)
                 this.endAng = this.startAng;
             else
                 this.endAng = ArcMethod.GetAngle((this.EndPoint.Y - this.arcCenter.Y) / this.radius,
