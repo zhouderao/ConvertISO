@@ -95,18 +95,18 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(1311, 668);
-            this.splitContainer1.SplitterDistance = 374;
+            this.splitContainer1.SplitterDistance = 347;
             this.splitContainer1.TabIndex = 4;
             // 
             // lstBxB
             // 
             this.lstBxB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstBxB.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lstBxB.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lstBxB.FormattingEnabled = true;
-            this.lstBxB.ItemHeight = 16;
+            this.lstBxB.ItemHeight = 14;
             this.lstBxB.Location = new System.Drawing.Point(0, 0);
             this.lstBxB.Name = "lstBxB";
-            this.lstBxB.Size = new System.Drawing.Size(374, 668);
+            this.lstBxB.Size = new System.Drawing.Size(347, 668);
             this.lstBxB.TabIndex = 0;
             // 
             // splitContainer2
@@ -122,8 +122,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.lstBxG);
-            this.splitContainer2.Size = new System.Drawing.Size(933, 668);
-            this.splitContainer2.SplitterDistance = 599;
+            this.splitContainer2.Size = new System.Drawing.Size(960, 668);
+            this.splitContainer2.SplitterDistance = 636;
             this.splitContainer2.TabIndex = 0;
             // 
             // pnlDraw
@@ -132,18 +132,18 @@
             this.pnlDraw.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDraw.Location = new System.Drawing.Point(0, 0);
             this.pnlDraw.Name = "pnlDraw";
-            this.pnlDraw.Size = new System.Drawing.Size(599, 668);
+            this.pnlDraw.Size = new System.Drawing.Size(636, 668);
             this.pnlDraw.TabIndex = 4;
             // 
             // lstBxG
             // 
             this.lstBxG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstBxG.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lstBxG.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lstBxG.FormattingEnabled = true;
-            this.lstBxG.ItemHeight = 16;
+            this.lstBxG.ItemHeight = 14;
             this.lstBxG.Location = new System.Drawing.Point(0, 0);
             this.lstBxG.Name = "lstBxG";
-            this.lstBxG.Size = new System.Drawing.Size(330, 668);
+            this.lstBxG.Size = new System.Drawing.Size(320, 668);
             this.lstBxG.TabIndex = 0;
             // 
             // FormMain

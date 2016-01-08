@@ -22,13 +22,15 @@ namespace ConvertISO
 
             PointF point1 = new PointF(0, 0);
             PointF point2 = new PointF(0, 0);
-            point1.X = this.StartPoint.X + x;
-            point1.Y = frameHeight - this.StartPoint.Y - y;
-            point2.X = this.EndPoint.X + x;
-            point2.Y = frameHeight - this.EndPoint.Y - y;
-            grp.DrawLine(pen, point1, point2);
 
-            grp.FillEllipse(brush, this.StartPoint.X + x - 4, frameHeight - this.StartPoint.Y - y - 4, 8, 8);
+            point1.X = this.StartPoint.X * 10 + x;
+            point1.Y = frameHeight - this.StartPoint.Y*10 - y;
+
+            point2.X = this.EndPoint.X*10 + x;
+            point2.Y = frameHeight - this.EndPoint.Y*10 - y;
+
+            grp.DrawLine(pen, point1, point2);
+            grp.FillEllipse(brush, this.StartPoint.X * 10 + x - 4, frameHeight - this.StartPoint.Y * 10 - y - 4, 8, 8);
         }
 
         public override void GDIDraw(Graphics grp, float frameHeight, Brush brush)

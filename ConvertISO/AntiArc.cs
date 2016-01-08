@@ -40,10 +40,12 @@ namespace ConvertISO
             Pen pen = new Pen(Color.Green, 1.0f);
 
             RectangleF rect = new RectangleF();
-            rect.X = this.arcCenter.X - this.radius + x;
-            rect.Y = frameHeight - (this.arcCenter.Y + this.radius) - y;
-            rect.Width = 2 * this.radius;
-            rect.Height = 2 * this.radius;
+
+            rect.X = this.arcCenter.X * 10 - this.radius * 10 + x;
+            rect.Y = frameHeight - (this.arcCenter.Y * 10 + this.radius * 10) - y;
+
+            rect.Width = 20 * this.radius;
+            rect.Height = 20 * this.radius;
 
             float ang = this.endAng - this.startAng;
 
@@ -51,7 +53,7 @@ namespace ConvertISO
                 ang += 360;
 
             grp.DrawArc(pen, rect, 360 - this.endAng, ang);
-            grp.FillEllipse(brush, this.StartPoint.X + x - 4, frameHeight - this.StartPoint.Y - y - 4, 8, 8);
+            grp.FillEllipse(brush, this.StartPoint.X * 10 + x - 4, frameHeight - this.StartPoint.Y * 10 - y - 4, 8, 8);
         }
 
         public override void GDIDraw(Graphics grp, float frameHeight, Brush brush)

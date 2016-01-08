@@ -128,7 +128,7 @@ namespace ConvertISO
                 int tempI = 0;
                 foreach (Shape shape in shapes)
                 {
-                    shape.GDIDraw(grp, this.pnlDraw.Height, 400, 400, GetBrush(tempI));
+                    shape.GDIDraw(grp, this.pnlDraw.Height, 100, 100, GetBrush(tempI));
                     tempI++;
                 }
                 outStr = "N" + n.ToString() + " T85 T87 M02;";
